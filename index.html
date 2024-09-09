@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Saver App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app-container">
+        <header class="header">
+            <h1>Money Saver App</h1>
+        </header>
+        <main class="content">
+            <section id="balance-section">
+                <h2>Your Balance</h2>
+                <p id="balance">₹0.00</p>
+            </section>
+            <div class="form-group">
+                <label for="amount">Deposit Amount:</label>
+                <input type="number" id="amount" placeholder="Enter amount">
+            </div>
+            <div class="buttons">
+                <button class="btn primary" onclick="deposit()">Deposit</button>
+                <button class="btn secondary" onclick="scheduleWithdrawal()">Schedule Withdrawal</button>
+                <button class="btn warning" onclick="emergencyWithdraw()">Emergency Withdraw</button>
+                <button class="btn danger" id="withdraw-button" onclick="withdraw()" disabled>Withdraw</button>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>&copy; 2024 Money Saver App. All Rights Reserved.</p>
+        </footer>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

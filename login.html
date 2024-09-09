@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 350px;
+            text-align: center;
+        }
+
+        .login-header {
+            background-color: #0073e6;
+            color: #ffffff;
+            padding: 20px;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .login-form {
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .login-button {
+            background-color: #0073e6;
+            color: #ffffff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .login-button:hover {
+            background-color: #005bb5;
+        }
+
+        .options {
+            margin-top: 20px;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .options a {
+            color: #0073e6;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .options a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">Login</div>
+        <form action="index.html">
+            <div class="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <input type="submit" class="login-button" value="Login">
+            </div>
+        </form>
+        <div class="options">
+            <a href="#" id="signup" onclick="showSignUp()">Sign Up</a>
+            <a href="#" onclick="showForgotPassword()">Forgot Password</a>
+            <a href="#" onclick="showSignIn()">Sign In</a>
+        </div>
+    </div>
+
+    <script>
+        function showSignUp() {
+            // Redirect to Sign Up page
+            window.location.href = 'signup.html'; // Change URL to the actual sign-up page
+        }
+
+        function showForgotPassword() {
+            alert("Redirect to Forgot Password page");
+            // Add logic to redirect to Forgot Password page
+        }
+
+        function showSignIn() {
+            alert("Redirect to Sign In page");
+            // Add logic to redirect to Sign In page
+        }
+
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Login clicked');
+            // Add your login logic here, e.g., redirect to the home page after login
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
